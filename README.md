@@ -9,10 +9,10 @@ An Evennia-based MUD with minimalist game systems to act as a stepping stone for
 - stuff
 
 ### Local Dev Environment
-- nuke windows line endings
-- ```
-    git config --global core.autocrlf true
-    ```
+- replace windows line endings with Linux/OSX/BSD ones
+    - ```
+        git config --global core.autocrlf true
+        ```
 - setup virtualenv
     - ```
         Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
