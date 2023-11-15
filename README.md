@@ -6,7 +6,7 @@ An Evennia-based MUD with minimalist game systems to act as a stepping stone for
 - Python 3.x (I used [Chocolatey](https://chocolatey.org/) for Windows package management)
   - python -c "import os, sys; print(os.path.dirname(sys.executable))"
   - C:\ProgramData\chocolatey\bin\python3.11.exe
-- stuff
+- Visual Studio Code as an IDE, so you may need to change somethings to work with your specific use-case
 
 ### Local Dev Environment
 - replace windows line endings with Linux/OSX/BSD ones
@@ -32,13 +32,26 @@ An Evennia-based MUD with minimalist game systems to act as a stepping stone for
         ```
 
 ### Docker Dev Environment
+TODO
+
 ### Misc
 - spaces, 2 per tab
-- replace window line returns
+  - I do this to maintain continuity with yaml file formatting
+  - also a habit from back in my C coding days, everything had better readability with 2 tabs
 - pre-commit hooks
-- auto-formatting with [Black](https://black.readthedocs.io/en/stable/index.html)
+  - auto-formatting Python with [Black](https://black.readthedocs.io/en/stable/index.html)
+  - prettifying Markdown with ???
 
 ## Use
+1. activate virtualenv
+2. evennia start
+3. code
+4. debugging is a bit tricky
+   1. attach to process
+   2. search for "evennia" (no quotes)
+   3. always the second process in the list
+   4. if you need to restart to test code changes, it'll sometimes hang; so you may need to evennia reload in the terminal or force quit everything & completely restart evennia
+5. go forth & codfiy!
 
 ## Troubleshooting
 - Error #1
@@ -51,8 +64,8 @@ An Evennia-based MUD with minimalist game systems to act as a stepping stone for
   - Ref: https://stackoverflow.com/
 
 ## References
-- https://www.markdownguide.org/basic-syntax/
+- [Markdown Cheatsheet](https://www.markdownguide.org/basic-syntax/)
 - [Evennia](https://github.com/evennia/evennia)
-- https://docs.github.com/en/actions/using-workflows
-- https://resources.github.com/ci-cd/
-- https://pre-commit.com/
+- [GitHub Workflows](https://docs.github.com/en/actions/using-workflows)
+- [GitHub CI/CD](https://resources.github.com/ci-cd/)
+- [Pre-commit Hooks](https://pre-commit.com/)
