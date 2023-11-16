@@ -3,51 +3,8 @@ An Evennia-based MUD with minimalist game systems to act as a stepping stone for
 
 NOTE: please see [our wiki](https://github.com/atebyagrue/living_world/wiki) for any additional details or steps.
 
-
-
-## Lexicon / Terms
-- Actors: these are the "people" in the game. May be called "Mobs" or "Mobiles" in other games. They typically are interacted with by players & can move around & do stuff.
-  - NPCs: are system-controlled actors with rudimentary A.I. to control them & perform actions. NPCs are assigned random personality traits on creation that drive their actions in the world.
-  - Players: humans playing the game.
-  - Builders: players with elevated privileges that are allowed to add content to the game.
-  - Superuser: the creator or the game with max privlieges.
-- Room: an in-game "place" where things happen. These may or may not be a room, byut in staad is an abstraction of a location where events can occur. For example, a room might be "A Gas Station Bathroom", but it might also be "A Quiet Beach", or "The Bottom of a Chasm". There is no hard & fast rules for sizing and it is dependedant on the builders' needs. In general, I tend to try to think of a room as a 20'x20' area, but there could be a room that is, "The Edge of a Vast & Uncrossable Ocean", etc.
-- Item: an in-game object. Ultimately, they are anything that have individual descriptions when looked at, that is not an Actor or Room. Some may or may not be able to be picked up, or "takable" by players. Items generally have some kind of function, a weight, and a value.
-
-## Current Features (Migrateed TODO Items)
-- Transportation
-- Retainers
-  - NPCs that can be hired by players.
-- Rooms
-  - Flags
-    - Dark: nothing in the room is visible to actors, unless they have true/darksight, are a superuser, or
-    - Skill (skill:dv): these rooms require passing a skill check in order to enter; think climbing:10 for a room someone must be able to climb into
-      - if a skill chekc fails, the player is not allowed entry. You, however, could implemnt drowning in a "swimming" room, falling in a "climbing" room, etc.
-- NPCs
-  - Types
-  - A.I.
-- Items
-  - base attributes
-  - Types
-    - Food
-    - Drink
-    - Clothing
-    - Drugs
-    - Containers
-    - Clothing
-    - Armor
-    - Weapons
-- Players
-  - Homeostasis
-  - Disposition
-  - Buff/Debuffs
-- Misc
-  - Grouping
-  - Camping
-  - Crafting
-  - Morale
-
-## TODO
+## Summary
+The intent of this doc is to focus on the codebase & how to set it up & use it. For background on the game itself, please consult the wiki.
 
 ## Setup
 ### Requirements
@@ -67,7 +24,7 @@ NOTE: please see [our wiki](https://github.com/atebyagrue/living_world/wiki) for
         & 'C:\Python311\python.exe' -m venv venv
         .\venv\Scripts\activate
         python -m pip install --upgrade pip
-        pip install evennia pre-commit pywin32
+        pip install evennia pre-commit pywin32pip
         windows users once: py -m evennia
 
         cd mygame
